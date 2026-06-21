@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    int y;
+    cin>>y;
+    y++;
+    while (true){
+        int a=y/1000;
+        int b=(y/100)%10;
+        int c=(y/10)%10;
+        int d=y%10;
+
+        if((a==b)||(b==c)||(c==d)||(d==a)||(d==b)||(c==a)){
+            y++;
+        }
+        else{
+            cout<<y<<endl;
+            break;
+        }
+    }
+    return 0;
+}
