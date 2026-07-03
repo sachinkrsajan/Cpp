@@ -18,17 +18,15 @@ int main() {
                 neg++;
             }
         }
-        if(sum>0){
-            if(neg%2==0){
-                cout<<0<<endl;
-            }
-            else{
-                cout<<1<<endl;
-            }
+        int ans=0;
+        while (sum<0) {
+            sum += 2;
+            neg--;
+            ans++;
         }
-        else{
-            cout<<neg<<endl;
-        }
+        if (neg % 2 != 0)
+            ans++;
+        cout << ans << endl;
         
     }
 
