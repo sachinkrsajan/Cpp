@@ -12,7 +12,12 @@ int main() {
             break;
         }
     }
-    if(ok) cout<<"YES";
-    else cout<<"NO";
+    if(ok) {
+        for(int i=0;i<s.length();i++){
+            if(islower(s[i])) s[i]=toupper(s[i]);
+            else s[i]=tolower(s[i]);
+        }
+    }
+    cout<<s<<endl;
     return 0;
 }
