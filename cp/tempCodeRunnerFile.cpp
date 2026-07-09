@@ -3,16 +3,24 @@ using namespace std;
 
 int main() {
 
-    string s;
-    cin>>s;
-    bool ok=true;
-    for(int i=1;i<s.length();i++){
-        if(!isupper(s[i])){
-            ok=false;
-            break;
+    int a,b,c;
+    cin>>a>>b>>c;
+    int max_sum=a*b*c;
+    if(a>b &&a>c&&a*(b+c)>max_sum){
+        max_sum=a*(b+c);
+    }
+    else if(b>a&&b>c&&b*(c+a)>max_sum){
+        max_sum=b*(a+c);
+    }
+    else if(c>a&&c>b&&c*(b+a)>max_sum){
+        max_sum=c*(a+b);
+    }
+    else{
+        if(a+b+c>max_sum){
+            max_sum=a+b+c;
         }
     }
-    if(ok) cout<<"YES";
-    else cout<<"NO";
+    cout<<max_sum<<endl;
+
     return 0;
 }
