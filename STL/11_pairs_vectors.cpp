@@ -5,7 +5,7 @@ int main() {
 
     pair<int,string> p;
     p=make_pair(2,"abc");
-    pair<int,string>p1=p; //makes a copy (&p1 makes reference)
+    pair<int,string>p1=p; //makes a copy (&p1 makes reference linking the two as 1)
     cout<<p.first<<" "<<p.second<<endl;
     int a[]={1,2,3};
     int b[]={2,3,4};
