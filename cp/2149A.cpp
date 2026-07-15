@@ -20,8 +20,12 @@ int main() {
                 np++;
             }
         }
-        cout<<(2*np)+zero<<endl;
+        if(np%2==0){
+            cout<<zero<<endl;
+        }
+        else{
+            cout<<2+zero<<endl;
+        }
     }
-
     return 0;
 }
