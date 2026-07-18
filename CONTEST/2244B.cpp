@@ -10,7 +10,6 @@ int main() {
         cin>>n;
         long long int a[n+10];
         bool found=false;
-        int check=0;
         for(int i=1;i<=n;i++){
             cin>>a[i];
         }
@@ -20,6 +19,9 @@ int main() {
                 break;
             }
             a[i+1]+=a[i]-i;
+        }
+        if(!found && a[n]<n){
+            found=true;
         }
         if(found){
             cout<<"NO"<<endl;
