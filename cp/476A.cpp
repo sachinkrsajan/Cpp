@@ -7,7 +7,9 @@ int main() {
     cin>>n>>m;
     int x=(n+1)/2;
     int y=x/m;
-    y++;
+    if((y*m)<x){
+        y++;
+    }
     int z=y*m;
     if(z<=n){
         cout<<z<<endl;
