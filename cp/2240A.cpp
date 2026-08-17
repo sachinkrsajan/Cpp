@@ -3,6 +3,7 @@ using namespace std;
 
 int main(){
 
+
     int t;
     cin>>t;
 
@@ -11,13 +12,15 @@ int main(){
         cin>>n>>k;
 
         long long ans=0;
+        long long p=1;
 
-        while(k>0){
-            long long x=min(k,n);
-            ans+=x;
-            n-=x;
-            k-=x;
+        while(n>=k*p){
+            n-=k*p;
+            ans+=k;
+            p*=2;
         }
+
+        ans+=n/p;
 
         cout<<ans<<"\n";
     }
